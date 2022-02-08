@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{04B645F8-65D6-4EBD-A2B4-B988EE677FD9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FastFood</RootNamespace>
+    <AssemblyName>FastFood</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>..\home\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zeroit.Framework.LollipopControls">
+      <HintPath>..\home\packages\Zeroit.Framework.LollipopControls.1.0.0\lib\Zeroit.Framework.LollipopControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoPrintCls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="class\classaddapter.cs" />
+    <Compile Include="class\classcommand.cs" />
+    <Compile Include="class\classcommand5.cs" />
+    <Compile Include="class\classconnection.cs" />
+    <Compile Include="class\classcontrol.cs" />
+    <Compile Include="class\classencrypt.cs" />
+    <Compile Include="class\classreader.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="security\frm_restore_by_email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="security\frm_restore_by_email.Designer.cs">
+      <DependentUpon>frm_restore_by_email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_transfer.Designer.cs">
+      <DependentUpon>frm_transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="selling\frm_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selling\frm_order.Designer.cs">
+      <DependentUpon>frm_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="selling\frm_mobile_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selling\frm_mobile_info.Designer.cs">
+      <DependentUpon>frm_mobile_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\frm_table_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goods\frm_table_info.Designer.cs">
+      <DependentUpon>frm_table_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="security\frm_change_new_pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="security\frm_change_new_pass.Designer.cs">
+      <DependentUpon>frm_change_new_pass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="security\frm_change_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="security\frm_change_user.Designer.cs">
+      <DependentUpon>frm_change_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="security\frm_first_visit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="security\frm_first_visit.Designer.cs">
+      <DependentUpon>frm_first_visit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="security\frm_forgett.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="security\frm_forgett.Designer.cs">
+      <DependentUpon>frm_forgett.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\frm_goods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goods\frm_goods.Designer.cs">
+      <DependentUpon>frm_goods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_home.Designer.cs">
+      <DependentUpon>frm_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="security\frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="security\frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="goods\frm_type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="goods\frm_type.Designer.cs">
+      <DependentUpon>frm_type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="security\frm_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="security\frm_user.Designer.cs">
+      <DependentUpon>frm_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="security\frm_restore_by_email.resx">
+      <DependentUpon>frm_restore_by_email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_transfer.resx">
+      <DependentUpon>frm_transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selling\frm_order.resx">
+      <DependentUpon>frm_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selling\frm_mobile_info.resx">
+      <DependentUpon>frm_mobile_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\frm_table_info.resx">
+      <DependentUpon>frm_table_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="security\frm_change_new_pass.resx">
+      <DependentUpon>frm_change_new_pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="security\frm_change_user.resx">
+      <DependentUpon>frm_change_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="security\frm_first_visit.resx">
+      <DependentUpon>frm_first_visit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="security\frm_forgett.resx">
+      <DependentUpon>frm_forgett.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\frm_goods.resx">
+      <DependentUpon>frm_goods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_home.resx">
+      <DependentUpon>frm_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="security\frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="goods\frm_type.resx">
+      <DependentUpon>frm_type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="security\frm_user.resx">
+      <DependentUpon>frm_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sdaeaaw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minuss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1009556-download-cool-background-for-computer-1920x1200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\types.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-forgot-password-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-name-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tables.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-closed-eye-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addresses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fingerprint-png-identity-politics-does-who-fingerprint-png-vector-414.png" />
+    <None Include="Resources\download %281%29.png" />
+    <None Include="Resources\4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
